@@ -1,49 +1,84 @@
-* {
+body { /*Cuerpo de la pagina*/
+  font-family: Arial, sans-serif;
+}
+
+header {  /*Barra superior*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 { /*Barra superior*/
+  margin: 0;
+}
+
+nav ul { /*Barra superior*/
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
 }
 
-body {
-  background: white;
-  color: #fff;
+nav li { /*Barra superior*/
+  margin: 0 10px;
+  
 }
 
-#header {
-  width: 100%;
-  height: 100vh;
-  background-color: whitesmoke;
-}
-
-.container {
-  padding: 10px 3%;
-}
-.container a {
-  color: black;
+nav ul a{ /*Barra superior*/
   text-decoration: none;
-}
-.container a:hover {
-  color: rgb(94, 94, 94);; 
-  text-decoration:none; 
-  cursor:pointer;  
+  color: black;
 }
 
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+nav ul a:hover{ /*Barra superior*/
+  text-decoration: none;
+  color: rgb(103, 103, 103);
+}
+
+
+section {
+  padding: 30px;
 }
 
 .logo{
-  width: 300px;
+  width: 60%;
 }
 
-nav ul li{
-  display: inline-block;
+.foto{
+  width: 30%;
+}
+
+section ul{
+  display: flex;
   list-style: none;
-  margin: 10px 20px;
+  margin: 0;
+  padding: 0;
+}
+
+section li a{
+  text-decoration: none;
+  color: black;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+section li a:hover{
+  text-decoration: none;
+  color: rgb(103, 103, 103);
 }
 
 
+footer { /*Barra inferior*/
+  padding: 20px;
+  text-align: center;
+}
+
+/* Agrega tus reglas media query aquí */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
